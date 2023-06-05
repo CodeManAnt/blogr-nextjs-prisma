@@ -24,6 +24,7 @@ const options = {
     SpotifyProvider({
       clientId: process.env.SPOTIFY_ID,
       clientSecret: process.env.SPOTIFY_SECRET,
+      authorization: "https://accounts.spotify.com/authorize?scope=user-top-read%20user-read-recently-played%20user-read-currently-playing",
     }),
   ],
   adapter: PrismaAdapter(prisma),

@@ -148,9 +148,9 @@ const Header: React.FC = () => {
     );
     right = (
       <div className="right">
-        <p>
-          {session.user.name} ({session.user.email})
-        </p>
+         <Link href="/profile">
+          <a data-active={isActive('/profile')}>{session.user.name}</a>
+        </Link>
         <Link href="/create">
           <button>
             <a>New post</a>
