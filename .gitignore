@@ -3,3 +3,5 @@ node_modules/
 .DS_STORE
 .env
 .vercel
+package-lock.json
+package.json
