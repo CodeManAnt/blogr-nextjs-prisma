@@ -27,7 +27,7 @@ const Post: React.FC<{ post: PostProps }> = ({ post }) => {
           {
             headers: {
               Authorization:
-                "Bearer BQBdg_b_ZJ9mB6lnnZ7pvw8vaZpgScyEdGPZG7kBZDMul0XQHG4tTr5cboHO6RKBrt0soh5CxR9lo9fI-vhbt-sfiBXamzLJOF_rW56Q17anzih9raKREV-n6MCorV0jDRjonWXrjRCCZ9S1DHGfLYNaBfoHpz-S4DaYwytMqMjkXg6xpt2RgoO6gFs7H6Ya2wk6ofs",
+                "Bearer BQBEcmwId0lKyWQqky9s6NCnUOFvs7NUKQkxROsSS2LzkQ_1sA3i_6SGdJjx8IQajI_pyL5bYfeAfPX_f9dK0opiLOjH5FUaEntZ6_w2TI8g_3rJyYTdN7sXquvieYRLUJnp4eeDXHGKo7Xv3rM5FltFKhmZ7amjzwc30aysVUvhBSo6uyEHR85FnspkEBaFqZGk87A",
               // Replace with your actual access token
             },
           }
