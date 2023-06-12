@@ -67,27 +67,17 @@ const Draft: React.FC = () => {
             value={content}
           />
 
-          {/* Add song search functionality */}
           <input
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search for a song"
-            type="text"
-            value={searchQuery}
+            disabled={!content || !title}
+            type="submit"
+            value="Create"
+            className="submit-btn"
           />
-          <button onClick={searchSongs}>Search</button>
-          <ul>
-            {searchResults.map((song) => (
-              <li key={song.id}>
-                {song.name} - {song.artists[0].name}
-                {/* Add a button or link to attach the selected song to the post */}
-              </li>
-            ))}
-          </ul>
-
-          <input disabled={!content || !title} type="submit" value="Create" />
-          <a className="back" href="#" onClick={() => Router.push('/')}>
-            or Cancel
-          </a>
+          <button className="submit-btn cancel-btn">
+            <a className="back" href="#" onClick={() => Router.push('/')}>
+              Cancel
+            </a>
+          </button>
         </form>
       </div>
       <style jsx>{`
@@ -108,10 +98,36 @@ const Draft: React.FC = () => {
           border: 0.125rem solid rgba(0, 0, 0, 0.2);
         }
 
-        input[type='submit'] {
+        input[type='submit'],
+        button.submit-btn {
           background: #ececec;
           border: 0;
           padding: 1rem 2rem;
+        }
+
+        .submit-btn {
+          background-color: #343a40; /* Dark background color */
+          color: #000; /* Text color */
+          border-radius: 0.5rem; /* Rounded corners */
+          transition: background-color 0.2s ease-in-out;
+          margin-right: 5em; /* 5em margin separating it from the Create button */
+        }
+
+        .cancel-btn a {
+          text-decoration: none;
+          height: 52px;
+          width: 114px;
+          align-text: center;
+        }
+
+        .submit-btn:hover {
+          background-color: #555; /* Darker background color on hover */
+          color: #fff; /* Text color */
+        }
+
+        .submit-btn:active {
+          background-color: yellow; /* Yellow background color when clicked */
+          color: #000; /* Text color when clicked */
         }
 
         .back {
@@ -119,6 +135,7 @@ const Draft: React.FC = () => {
         }
       `}</style>
     </Layout>
+
   );
 };
 

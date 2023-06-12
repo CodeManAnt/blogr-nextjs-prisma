@@ -81,16 +81,28 @@ const Post: React.FC<PostProps> = (props) => {
         }
 
         button {
-          background: #ececec;
+          background: #343a40; /* Dark background color */
+          color: #fff; /* Text color */
           border: 0;
           border-radius: 0.125rem;
           padding: 1rem 2rem;
+          transition: background 0.2s ease-in-out;
+        }
+
+        button:hover {
+          background: #555; /* Darker background color on hover */
+        }
+
+        button:active {
+          background: yellow; /* Yellow background color when clicked */
+          color: #000; /* Text color when clicked */
         }
 
         button + button {
           margin-left: 1rem;
         }
       `}</style>
+
     </Layout>
   );
 };

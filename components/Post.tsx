@@ -60,8 +60,28 @@ const Post: React.FC<{ post: PostProps }> = ({ post }) => {
       <ReactMarkdown children={post.content} />
       <style jsx>{`
         div {
-          color: inherit;
+          color: #fff; /* Text color */
           padding: 2rem;
+          background: #343a40; /* Dark background color */
+          border-radius: 0.5rem;
+          cursor: pointer;
+        }
+
+        h2 {
+          color: #fff; /* Heading text color */
+        }
+
+        small {
+          color: rgba(255, 255, 255, 0.8); /* Subtext color */
+        }
+
+        p {
+          color: #fff; /* Paragraph text color */
+        }
+      `}</style>
+      <style jsx global>{`
+        body {
+          margin: 0;
         }
       `}</style>
     </div>

@@ -90,6 +90,7 @@ const Header: React.FC = () => {
           <a data-active={isActive('/signup')}>Log in</a>
         </Link>
         <style jsx>{`
+
           a {
             text-decoration: none;
             color: var(--geist-foreground);
@@ -103,11 +104,31 @@ const Header: React.FC = () => {
           .right {
             margin-left: auto;
           }
-
           .right a {
             border: 1px solid var(--geist-foreground);
             padding: 0.5rem 1rem;
             border-radius: 3px;
+          }
+          .right button {
+            border: 1px solid var(--geist-foreground);
+            padding: 0.5rem 1rem;
+            border-radius: 3px;
+          }
+  
+          .log-in {
+            background-color: #343a40; /* Dark background color */
+            color: #fff; /* Text color */
+            border-radius: 0.5rem; /* Rounded corners */
+            transition: background-color 0.2s ease-in-out;
+          }
+  
+          .log-in:hover {
+            background-color: #555; /* Darker background color on hover */
+          }
+  
+          .log-in:active {
+            background-color: yellow; /* Yellow background color when clicked */
+            color: #000; /* Text color when clicked */
           }
         `}</style>
       </div>
@@ -160,16 +181,11 @@ const Header: React.FC = () => {
           <a>Log out</a>
         </button>
         <style jsx>{`
+
           a {
             text-decoration: none;
             color: var(--geist-foreground);
             display: inline-block;
-          }
-
-          p {
-            display: inline-block;
-            font-size: 13px;
-            padding-right: 1rem;
           }
 
           a + a {
@@ -179,15 +195,32 @@ const Header: React.FC = () => {
           .right {
             margin-left: auto;
           }
-
           .right a {
             border: 1px solid var(--geist-foreground);
             padding: 0.5rem 1rem;
             border-radius: 3px;
           }
-
-          button {
+  
+          .new-post,
+          .log-out {
             border: none;
+            background-color: #343a40; /* Dark background color */
+            color: #fff; /* Text color */
+            border-radius: 0.5rem; /* Rounded corners */
+            padding: 0.5rem 1rem;
+            margin-left: 0.5rem; /* Add spacing between the buttons */
+            transition: background-color 0.2s ease-in-out;
+          }
+  
+          .new-post:hover,
+          .log-out:hover {
+            background-color: #555; /* Darker background color on hover */
+          }
+  
+          .new-post:active,
+          .log-out:active {
+            background-color: yellow; /* Yellow background color when clicked */
+            color: #000; /* Text color when clicked */
           }
         `}</style>
       </div>

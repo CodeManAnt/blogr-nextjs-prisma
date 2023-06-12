@@ -45,14 +45,17 @@ const Blog: React.FC<Props> = (props) => {
       </div>
       <style jsx>{`
         .post {
-          background: white;
+          background: var(--geist-background);
           transition: box-shadow 0.1s ease-in;
+          border-radius: 0.5rem; /* Add rounded corners */
+          overflow: hidden; /* Hide the overflow content */
         }
-
+      
         .post:hover {
           box-shadow: 1px 1px 3px #aaa;
+          border-radius: 0.5rem; /* Keep rounded corners on hover */
         }
-
+      
         .post + .post {
           margin-top: 2rem;
         }

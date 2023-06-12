@@ -75,7 +75,6 @@ const ProfilePage: React.FC<Props> = (props) => {
       </div>
       <style jsx>{`
         .profile {
-          background: white;
           transition: box-shadow 0.1s ease-in;
         }
       `}</style>
